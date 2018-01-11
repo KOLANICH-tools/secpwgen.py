@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secpwgen"
+authors = [{name = "KOLANICH"}]
+description = "Generates a strong password"
+readme = "ReadMe.md"
+keywords = ["strong", "password", "generator"]
+license = {text = "Unlicense"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+]
+dependencies = ["more_itertools"]
+urls = {Homepage = "https://codeberg.org/KOLANICH-tools/secpwgen.py"}
+requires-python = ">=3.4"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+qrcode = ["qrcode"]
+"correct_view_on_windows_below_10" = ["colorama"]
+koremutake = ["koremutake"]
+
+[project.scripts]
+secpwgen = "secpwgen:main"
+pwgen = "secpwgen:main"
+
+[tool.setuptools]
+zip-safe = true
+py-modules = ["secpwgen"]
+
+[tool.setuptools_scm]
