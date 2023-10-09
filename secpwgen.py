@@ -8,6 +8,7 @@ import typing
 from math import ceil, log, log2
 from os import isatty
 from os.path import dirname
+from warnings import warn
 
 from more_itertools import flatten
 
@@ -39,6 +40,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org/>
 """
+
+warn("We have moved from M$ GitHub to https://codeberg.org/KOLANICH-tools/secpwgen.py , read why on https://codeberg.org/KOLANICH/Fuck-GuanTEEnomo .")
 
 try:
 	import secrets
